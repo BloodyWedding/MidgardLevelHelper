@@ -24,17 +24,17 @@ namespace MidgardLevelHelper.ConsoleApp
             var oneHandSwords = new WeaponCategory
             {
                 Name = "Einhandschwerter",
-                Cost = new TotalExperiencePoints { Value = 600 }
+                Cost = 600
             };
             var stabbingWeapons = new WeaponCategory
             {
                 Name = "Stichwaffe",
-                Cost = new TotalExperiencePoints { Value = 400 }
+                Cost = 400
             };
             var shields = new WeaponCategory
             {
                 Name = "Schilde",
-                Cost = new TotalExperiencePoints { Value = 300 }
+                Cost = 300
             };
 
             var longsword = new Weapon
