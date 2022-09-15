@@ -16,7 +16,7 @@ namespace MidgardLevelHelper.ConsoleApp
                 WeaponFactor = 0.5f
             };
 
-            var mage = new LevelingSchema("Magier")
+            var mage = new LevelingSchema("Zauberer")
             {
                 WeaponFactor = 2f
             };
