@@ -11,12 +11,12 @@ namespace MidgardLevelHelper.ConsoleApp
         static void Main(string[] args)
         {
 
-            var fighter = new CharacterClass("Kämpfer")
+            var fighter = new LevelingSchema("Kämpfer")
             {
                 WeaponFactor = 0.5f
             };
 
-            var mage = new CharacterClass("Magier")
+            var mage = new LevelingSchema("Magier")
             {
                 WeaponFactor = 2f
             };
@@ -82,13 +82,13 @@ namespace MidgardLevelHelper.ConsoleApp
 
         }
 
-        private static int CalculateTotalCost(CharacterClass characterClass, WeaponCategory weaponCategory)
+        private static int CalculateTotalCost(LevelingSchema characterClass, WeaponCategory weaponCategory)
         {
             var totalCost = Math.Floor(characterClass.WeaponFactor * weaponCategory.Cost.Value);
             return (int)totalCost;
         }
 
-        private static int CalculateTotalCost(CharacterClass characterClass, Weapon weapon, List<SkillLevelCost> skillLevelCosts, byte targetSkillLevel)
+        private static int CalculateTotalCost(LevelingSchema characterClass, Weapon weapon, List<SkillLevelCost> skillLevelCosts, byte targetSkillLevel)
         {
             SkillLevelCost targetSkillLevelCost;
             try
