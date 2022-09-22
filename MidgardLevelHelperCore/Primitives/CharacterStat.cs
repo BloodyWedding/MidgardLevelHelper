@@ -8,16 +8,17 @@ namespace MidgardLevelHelperCore.Primitives
 {
     public class CharacterStat
     {
-        public CharacterStat(string name)
+        public CharacterStat(string name, uint value)
         {
             if(string.IsNullOrWhiteSpace(name))
             {
                 throw new ArgumentNullException(nameof(name));
             }
             Name = name;
+            Value = value;
         }
 
         public string Name { get; }
-        public uint Value { get; init; }
+        public uint Value { get; protected set; }
     }
 }
