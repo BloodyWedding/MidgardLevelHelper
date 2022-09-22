@@ -74,10 +74,26 @@ namespace MidgardLevelHelper.ConsoleApp
                 new SkillLevelCost { SkillLevel = 11, Cost = 80 },
             };
 
+            var ranger = new CharacterClass("Waldläufer")
+            {
+                LevelingSchema = fighter,
+                ResistanceBonuses = new Resistances { Physical = 2 },
+                BaseSkills = new [] { "Balancieren","Geländelauf","Scharfschießen"},
+                ExceptionalSkills = new [] { "Lesen von Zauberschrift","Rechnen","Verhören" },
+                ForbiddenSkills = new[] {"Wissen von der Magie"}
+            };
+
+            var characterStat = new CharacterStat("Test1",1);
+            var editableCharacterStat = new EditableCharacterStat("Test2",2);
+            editableCharacterStat.Value = 3;
+
             Console.WriteLine(CalculateTotalCost(mage, shields));
             Console.WriteLine(CalculateTotalCost(mage, longsword, offensiveWeaponSkillLevels, 7));
             Console.WriteLine(CalculateTotalCost(fighter, dagger, offensiveWeaponSkillLevels, 10));
-            Console.WriteLine(CalculateTotalCost(fighter, longsword, offensiveWeaponSkillLevels, 15));
+            //Console.WriteLine(CalculateTotalCost(fighter, longsword, offensiveWeaponSkillLevels, 15));
+            Console.WriteLine(characterStat.Value);
+            Console.WriteLine(editableCharacterStat.Value);
+            Console.WriteLine(((CharacterStat)editableCharacterStat).Value);
             Console.ReadKey();
 
         }
