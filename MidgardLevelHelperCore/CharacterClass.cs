@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MidgardLevelHelperCore.Primitives;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,9 @@ namespace MidgardLevelHelperCore
 
         public string Name { get; }
         public LevelingSchema LevelingSchema { get; init; }
-        //TODO Grundfähigkeit & Ausnahmefähigkeit definieren
+        public Resistances ResistanceBonuses { get; init; }
+        public IReadOnlyList<string> BaseSkills { get; init; }
+        public IReadOnlyList<string> ExceptionalSkills { get; init; }
+        public IReadOnlyList<string> ForbiddenSkills { get; init; }
     }
 }
