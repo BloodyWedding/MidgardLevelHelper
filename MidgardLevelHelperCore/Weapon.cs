@@ -12,7 +12,7 @@ namespace MidgardLevelHelperCore
         public byte Difficulty { get; init; }
         public byte RequiredStrength { get; init; }
         public byte RequiredDexterity { get; init; }
-        public WeaponCategory WeaponCategory { get; init; }
+        public WeaponCategory WeaponCategory { get; init; } // TODO Prevent NULL
 
     }
 }

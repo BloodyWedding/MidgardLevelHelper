@@ -18,8 +18,8 @@ namespace MidgardLevelHelperCore
         public string Name { get; }
         public LevelingSchema LevelingSchema { get; init; } // TODO Prevent NULL
         public Resistances ResistanceBonuses { get; init; }
-        public IReadOnlyList<string> BaseSkills { get; init; } // TODO Prevent duplicate entries
-        public IReadOnlyList<string> ExceptionalSkills { get; init; } // TODO Prevent duplicate entries
-        public IReadOnlyList<string> ForbiddenSkills { get; init; } // TODO Prevent duplicate entries
+        public IReadOnlyList<string> BaseSkills { get; init; } // TODO Prevent duplicate entries and NULL
+        public IReadOnlyList<string> ExceptionalSkills { get; init; } // TODO Prevent duplicate entries and NULL
+        public IReadOnlyList<string> ForbiddenSkills { get; init; } // TODO Prevent duplicate entries and NULL
     }
 }
