@@ -20,6 +20,7 @@ namespace MidgardLevelHelperCore
 
         public string Name { get; }
         public CharacterClass Class { get; init; }
+        public short HealthPoints { get; init; }
         public List<EditableCharacterStat> Skills { get; init; }
         public IReadOnlyList<EditableCharacterStat> Attributes { get; init; }
     }
