@@ -21,7 +21,7 @@ namespace MidgardLevelHelperCore
 
         public string Name { get; }
         public CharacterClass Class { get; init; } // TODO Prevent NULL
-        public short HealthPoints { get; init; }
+        public short HealthPoints { get; set; }
         public HashSet<EditableCharacterStat> Skills { get; } = new HashSet<EditableCharacterStat>(CharacterStatNameComparer.Default);
         public IReadOnlyList<EditableCharacterStat> Attributes
         {
