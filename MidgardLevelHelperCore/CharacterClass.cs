@@ -1,9 +1,6 @@
 ﻿using MidgardLevelHelperCore.Primitives;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MidgardLevelHelperCore
 {
@@ -19,10 +16,10 @@ namespace MidgardLevelHelperCore
         }
 
         public string Name { get; }
-        public LevelingSchema LevelingSchema { get; init; }
+        public LevelingSchema LevelingSchema { get; init; } // TODO Prevent NULL
         public Resistances ResistanceBonuses { get; init; }
-        public IReadOnlyList<string> BaseSkills { get; init; }
-        public IReadOnlyList<string> ExceptionalSkills { get; init; }
-        public IReadOnlyList<string> ForbiddenSkills { get; init; }
+        public IReadOnlyList<string> BaseSkills { get; init; } // TODO Prevent duplicate entries
+        public IReadOnlyList<string> ExceptionalSkills { get; init; } // TODO Prevent duplicate entries
+        public IReadOnlyList<string> ForbiddenSkills { get; init; } // TODO Prevent duplicate entries
     }
 }
