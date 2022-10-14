@@ -12,7 +12,7 @@ namespace MidgardLevelHelperCore.Comparer
         {
             if (x is not null && y is not null)
             {
-                return Equals(x.Name, y.Name);
+                return SkillsAndAttributesComparer.Default.Equals(x.Name, y.Name);
             }
 
             return x == null && y == null;
@@ -20,7 +20,8 @@ namespace MidgardLevelHelperCore.Comparer
 
         public int GetHashCode([DisallowNull] CharacterStat obj)
         {
-            return obj.Name.GetHashCode();
+            ArgumentNullException.ThrowIfNull(obj);
+            return SkillsAndAttributesComparer.Default.GetHashCode(obj.Name);
         }
     }
 }
