@@ -8,7 +8,7 @@ namespace MidgardLevelHelperCore
 {
     public class CharacterClass
     {
-        private readonly LevelingSchema levelingSchema;
+        private readonly LevelingSchema _levelingSchema;
         private readonly IReadOnlyList<string> _baseSkills = Array.Empty<string>();
         private readonly IReadOnlyList<string> _exceptionalSkills = Array.Empty<string>();
         private readonly IReadOnlyList<string> _forbiddenSkills = Array.Empty<string>();
@@ -25,11 +25,11 @@ namespace MidgardLevelHelperCore
         public string Name { get; }
         public LevelingSchema LevelingSchema
         {
-            get => levelingSchema;
+            get => _levelingSchema;
             init // TODO Eher im ctor, da es nicht NULL sein sollte (und aktuell so vergessen werden kann)
             {
                 ArgumentNullException.ThrowIfNull(value);
-                levelingSchema = value;
+                _levelingSchema = value;
             }
         }
         public Resistances ResistanceBonuses { get; init; }
