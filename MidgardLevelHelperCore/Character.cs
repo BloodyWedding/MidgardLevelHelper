@@ -24,7 +24,7 @@ namespace MidgardLevelHelperCore
         public CharacterClass Class
         {
             get => _class;
-            init
+            init // TODO Eher im ctor, da es nicht NULL sein sollte (und aktuell so vergessen werden kann)
             {
                 ArgumentNullException.ThrowIfNull(value);
                 _class = value;
@@ -36,7 +36,8 @@ namespace MidgardLevelHelperCore
         {
             get => _attributes;
 
-            init
+            init // TODO Eher im ctor, da es nicht NULL sein sollte (und aktuell so vergessen werden kann) alternativ kann diese Liste tatsächlich fix initialisiert werden da sie ja immer die gleichen Attribute beinahltet
+
             {
                 ArgumentNullException.ThrowIfNull(value);
                 var duplicates = value.GetNonUniqueCharacterStatNames();

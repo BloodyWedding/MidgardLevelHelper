@@ -21,7 +21,7 @@ namespace MidgardLevelHelperCore
         public WeaponCategory WeaponCategory
         {
             get => _weaponCategory;
-            init
+            init // TODO Eher im ctor, da es nicht NULL sein sollte (und aktuell so vergessen werden kann)
             {
                 ArgumentNullException.ThrowIfNull(value);
                 _weaponCategory = value;
