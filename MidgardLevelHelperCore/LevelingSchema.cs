@@ -14,6 +14,6 @@ namespace MidgardLevelHelperCore
         }
 
         public string Type { get; }
-        public float WeaponFactor { get; init; }
+        public float WeaponFactor { get; init; } // TODO Darf der Factor 0 sein?
     }
 }

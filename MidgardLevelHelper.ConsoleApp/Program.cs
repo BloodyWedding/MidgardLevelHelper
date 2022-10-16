@@ -21,44 +21,38 @@ namespace MidgardLevelHelper.ConsoleApp
                 WeaponFactor = 2f
             };
 
-            var oneHandSwords = new WeaponCategory
+            var oneHandSwords = new WeaponCategory("Einhandschwerter")
             {
-                Name = "Einhandschwerter",
                 Cost = 600
             };
-            var stabbingWeapons = new WeaponCategory
+            var stabbingWeapons = new WeaponCategory("Stichwaffe")
             {
-                Name = "Stichwaffe",
                 Cost = 400
             };
-            var shields = new WeaponCategory
+            var shields = new WeaponCategory("Schilde")
             {
-                Name = "Schilde",
                 Cost = 300
             };
 
-            var longsword = new Weapon
+            var longsword = new Weapon("Langschwert")
             {
                 Difficulty = 5,
-                Name = "Langschwert",
                 RequiredDexterity = 21,
                 RequiredStrength = 31,
                 WeaponCategory = oneHandSwords
             };
 
-            var buckler = new Weapon
+            var buckler = new Weapon("Buckler")
             {
                 Difficulty = 1,
-                Name = "Buckler",
                 RequiredDexterity = 61,
                 RequiredStrength = 1,
                 WeaponCategory = shields
             };
 
-            var dagger = new Weapon
+            var dagger = new Weapon("Dolch")
             {
                 Difficulty = 2,
-                Name = "Dolch",
                 RequiredDexterity = 1,
                 RequiredStrength = 1,
                 WeaponCategory = stabbingWeapons

@@ -1,18 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MidgardLevelHelperCore
 {
     public class Weapon
     {
-        public string Name { get; init; }
+        private readonly WeaponCategory _weaponCategory;
+
+        public Weapon(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentNullException(nameof(name));
+
+            Name = name;
+        }
+        public string Name { get; }
+
         public byte Difficulty { get; init; }
         public byte RequiredStrength { get; init; }
         public byte RequiredDexterity { get; init; }
-        public WeaponCategory WeaponCategory { get; init; } // TODO Prevent NULL
-
+        public WeaponCategory WeaponCategory
+        {
+            get => _weaponCategory;
+            init // TODO Eher im ctor, da es nicht NULL sein sollte (und aktuell so vergessen werden kann)
+            {
+                ArgumentNullException.ThrowIfNull(value);
+                _weaponCategory = value;
+            }
+        }
     }
 }
