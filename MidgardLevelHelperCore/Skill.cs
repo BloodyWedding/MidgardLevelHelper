@@ -7,7 +7,7 @@ namespace MidgardLevelHelperCore
 {
     public class Skill
     {
-        private readonly IReadOnlyList<CharacterStat> _requirements;
+        private readonly IReadOnlyList<CharacterStat> _requirements = Array.Empty<CharacterStat>();
 
         public Skill(string name)
         {

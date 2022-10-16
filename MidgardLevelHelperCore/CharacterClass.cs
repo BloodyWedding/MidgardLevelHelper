@@ -9,9 +9,9 @@ namespace MidgardLevelHelperCore
     public class CharacterClass
     {
         private readonly LevelingSchema levelingSchema;
-        private readonly IReadOnlyList<string> _baseSkills;
-        private readonly IReadOnlyList<string> _exceptionalSkills;
-        private readonly IReadOnlyList<string> _forbiddenSkills;
+        private readonly IReadOnlyList<string> _baseSkills = Array.Empty<string>();
+        private readonly IReadOnlyList<string> _exceptionalSkills = Array.Empty<string>();
+        private readonly IReadOnlyList<string> _forbiddenSkills = Array.Empty<string>();
 
         public CharacterClass(string name)
         {
